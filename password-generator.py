@@ -22,3 +22,10 @@ shuffle(arr)
 
 passw=''.join(arr)  #again converting back to string
 print(passw)
+
+inp=input("Do you want to save this password?(Y/N)\t")
+if inp == "Y" or "y":
+    f = open("passfile.txt","a")
+    note = input("Leave a note:\t")
+    f.write(f"\n{note}: {passw}")
+    f.close()
